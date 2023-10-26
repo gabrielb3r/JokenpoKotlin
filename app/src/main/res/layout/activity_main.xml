@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/jokenTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JOKENPÔ"
+        android:textColor="@color/blue_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/papelBtn"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/pedraBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_rock"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/papelBtn"
+        app:layout_constraintTop_toBottomOf="@+id/jokenTitle"
+        app:layout_constraintBottom_toTopOf="@+id/escolhaUser"
+        android:background="@drawable/image_selector"
+        />
+
+    <ImageView
+        android:id="@+id/papelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_paper"
+        android:clickable="true"
+        app:layout_constraintStart_toEndOf="@+id/pedraBtn"
+        app:layout_constraintEnd_toStartOf="@id/tesouraBtn"
+        app:layout_constraintTop_toBottomOf="@+id/jokenTitle"
+        app:layout_constraintBottom_toTopOf="@+id/escolhaUser"
+        android:background="@drawable/image_selector"
+        />
+
+    <ImageView
+        android:id="@+id/tesouraBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_scizor"
+        android:clickable="true"
+        app:layout_constraintStart_toEndOf="@+id/papelBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jokenTitle"
+        app:layout_constraintBottom_toTopOf="@+id/escolhaUser"
+        android:background="@drawable/image_selector"
+        />
+
+    <TextView
+        android:id="@+id/escolhaUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sua escolha:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/escolhaUserCampo"
+        app:layout_constraintTop_toBottomOf="@+id/papelBtn"
+        app:layout_constraintBottom_toTopOf="@+id/escolhaCPU"/>
+
+    <EditText
+        android:id="@+id/escolhaUserCampo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/escolhaUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/papelBtn"
+        app:layout_constraintBottom_toTopOf="@+id/escolhaCPUCampo" />
+
+    <TextView
+        android:id="@+id/escolhaCPU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha CPU:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/escolhaCPUCampo"
+        app:layout_constraintTop_toBottomOf="@+id/escolhaUser"
+        app:layout_constraintBottom_toTopOf="@+id/placarUser"/>
+
+    <EditText
+        android:id="@+id/escolhaCPUCampo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/escolhaCPU"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/escolhaUserCampo"
+        app:layout_constraintBottom_toTopOf="@+id/placarCPU"/>
+
+    <TextView
+        android:id="@+id/placarUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Placar Você:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/placarCPU"
+        app:layout_constraintTop_toBottomOf="@+id/escolhaCPUCampo"
+        app:layout_constraintBottom_toTopOf="@+id/placarUserCampo" />
+
+    <TextView
+        android:id="@+id/placarCPU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Placar CPU:"
+        app:layout_constraintStart_toEndOf="@+id/placarUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/escolhaCPUCampo"
+        app:layout_constraintBottom_toTopOf="@+id/placarCPUCampo" />
+
+    <EditText
+        android:id="@+id/placarUserCampo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/placarCPUCampo"
+        app:layout_constraintTop_toBottomOf="@+id/placarUser"
+        app:layout_constraintBottom_toTopOf="@+id/jogarBtn" />
+
+    <EditText
+        android:id="@+id/placarCPUCampo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/placarUserCampo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placarCPU"
+        app:layout_constraintBottom_toTopOf="@+id/jogarBtn" />
+
+    <Button
+        android:id="@+id/jogarBtn"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="JOGAR"
+        android:textStyle="bold"
+        android:backgroundTint="@color/blue_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placarUserCampo"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
